@@ -1,4 +1,6 @@
 CP usr /
 PKG nginx
+CMD mkdir -p /var/cache/packages
+CMD chown www:www /var/cache/packages
 SYSRC nginx_enable=YES
 SERVICE nginx start
